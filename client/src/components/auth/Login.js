@@ -9,16 +9,13 @@ class Login extends Component {
 			password: '',
 			errors: {}
 		}
-
-		this.onSubmit = this.onSubmit.bind(this);
-		this.onChange = this.onChange.bind(this);
 	}
 
-	onChange(e) {
+	onChange = e => {
 		this.setState({[e.target.name]: e.target.value})
 	}
 
-	onSubmit(e) {
+	onSubmit = e => {
 		e.preventDefault();
 
 		const { email, password } = this.state;
